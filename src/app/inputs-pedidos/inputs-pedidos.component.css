@@ -1,0 +1,99 @@
+.containerGlobal{
+    display: flex;
+}
+.containerInputs{
+    display: grid;
+    justify-content: center;
+    width: 50%;
+}
+.dataClient{
+    margin: 10px;
+    padding: 12px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #000;
+    color: #fff;
+    transition: all ease .5s;
+    border: 0px;
+    border-radius: 15px;
+    resize: none;
+}
+textarea{
+    width: 170px;
+    height: 50px;
+}
+.form{
+    display: grid;
+    justify-content: center;
+}
+.dataClient:focus{
+    transition: all ease .5s;
+    background-color: #00ffff;
+    color: #000;
+}
+.sumbitBtn{
+    border: 0ch;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    width: 90px;
+    text-align: center;
+    transition: all ease .5s;
+}
+.sumbitBtn:hover{
+    transition: all ease .5s;
+    transform: rotate(360deg);
+    color: #000;
+    background-color: #00ffff;
+    cursor: pointer;
+}
+.parrafoPedido{
+    width: 40%;
+    height: 500px;
+    display: grid;
+    border: 1px solid #000;
+    justify-content: center;
+}
+.btnOtrosPedidos{
+    display: block;
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    width: 75px;
+    border-color: #ccc;
+    position: absolute;
+    right: 10px;
+    transition: all ease .5s;
+    min-width: 90px;
+    padding: 5px;
+}
+.btnOtrosPedidos:hover{
+    background-color: #4C0B5F;
+    color: #fff;
+    transition: all ease .5s;
+    cursor: pointer;
+}
+.titleEntrega{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    text-transform: capitalize;
+    text-align: center;
+}
+.pedidosParagraph{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F51720;
+    color: #fff;
+    padding: 8px;
+    min-width: 450px;
+    min-height: 35px;
+}

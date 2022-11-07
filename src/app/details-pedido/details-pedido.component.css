@@ -1,0 +1,28 @@
+.containerGlobal{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.btnOtrosPedidos{
+    display: block;
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    width: 75px;
+    border-color: #ccc;
+    background-color: #fff;
+    text-decoration: none;
+    color: #000;
+    position: absolute;
+    right: 10px;
+    transition: all ease .5s;
+    min-width: 90px;
+    padding: 5px;
+}
+.btnOtrosPedidos:hover{
+    background-color: #4C0B5F;
+    color: #fff;
+    transition: all ease .5s;
+    cursor: pointer;
+}

@@ -1,0 +1,53 @@
+<div class="containerGlobal">
+    <div class="containerInputs">
+        <form #myForm="ngForm" class="form" (submit)="sendPedido(myForm)">
+            <textarea #Pedido="ngModel" name="pedido" required placeholder="pedido"
+            class="dataClient" [(ngModel)]="pedidoInfo.pedido" required></textarea>
+
+            <div *ngIf="Pedido.touched && !Pedido.valid">
+                <span>Este campo no debe estar vacío</span>
+            </div>
+
+            <input #NombreCliente="ngModel" name="nameClient" required type="text" placeholder="Nombre del cliente"
+            class="dataClient" [(ngModel)]="pedidoInfo.nameClient" required>
+
+            <div *ngIf="NombreCliente.touched && !NombreCliente.valid">
+                <span>Este campo no debe estar vacío</span>
+            </div>
+
+            <input #Telefono="ngModel" name="phoneClient" required type="number" placeholder="Telefono celular"
+            class="dataClient" [(ngModel)]="pedidoInfo.phoneClient" required>
+
+            <div *ngIf="Telefono.touched && !Telefono.valid">
+                <span>Este campo no debe estar vacío</span>
+            </div>
+
+            <textarea #Direccion="ngModel" name="address" required placeholder="Direccion"
+            class="dataClient" [(ngModel)]="pedidoInfo.address" required></textarea>
+
+            <div *ngIf="Direccion.touched && !Direccion.valid">
+                <span>Este campo no debe estar vacío</span>
+            </div>
+
+            <input #DineroRecibir="ngModel" name="CashToPay" required type="number" placeholder="{{pedidoInfo.CashToPay}}"
+            class="dataClient" [(ngModel)]="pedidoInfo.CashToPay" required>
+
+            <div *ngIf="DineroRecibir.touched && !DineroRecibir.valid">
+                <span>Este campo no debe estar vacío</span>
+            </div>
+
+            <input type="submit" value="Crear" class="sumbitBtn" [disabled]="!myForm.form.valid">
+        </form>
+        <p id="enviadoParagraph"></p>
+    </div>
+    <div class="parrafoPedido">
+        <button (click)="redirectOtrosPedidos()" class="btnOtrosPedidos">Otros pedidos</button>
+        <h3 class="titleEntrega">Informacion de la entrega</h3>
+        <p class="pedidosParagraph">Pedido: <span>{{pedidoInfo.pedido}}</span></p>
+        <p class="pedidosParagraph">Nombre del cliente: <span>{{pedidoInfo.nameClient}}</span></p>
+        <p class="pedidosParagraph">Telefono celular: <span>{{pedidoInfo.phoneClient}}</span></p>
+        <p class="pedidosParagraph">Direccion: <span>{{pedidoInfo.address}}</span></p>
+        <p class="pedidosParagraph">Dinero a recibir: <span>{{pedidoInfo.CashToPay | currency}}</span></p>
+    </div>
+    <p id="pedidos">
+</div>

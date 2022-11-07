@@ -1,0 +1,9 @@
+<div class="containerGlobal">
+    <h1>NOMBRE: "{{pedido.nameClient}}"</h1>
+    <h2>DIRECCION: "{{pedido.address}}"</h2>
+    <p>
+        NUMERO DE TELEFONO: "{{pedido.phoneClient}}"
+    </p>
+    <button (click)="deletePedido(pedido._id)">Eliminar Pedido</button>
+    <a class="btnOtrosPedidos" [routerLink]="['/otrosPedidos']">Otros pedidos</a>
+</div>

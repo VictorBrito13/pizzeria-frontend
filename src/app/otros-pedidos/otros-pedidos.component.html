@@ -1,0 +1,17 @@
+<div class="containerGlobal">
+    <button (click)="redirectRegisterPedidos()" class="AddPedidos">Añadir pedido</button>
+    <div class="pedidosContainer">
+        <!-- AQUI SE MUESTRAN LOS PEDIDOS -->
+        <div class="divPedidos" *ngFor="let i of pedidos">
+            <p class="contentInfoPedido">
+                <a [routerLink]="['/pedido/' + i._id]">
+                    Nombre: <span>{{i.nameClient}}</span> <br>
+                    Celular: <span>{{i.phoneClient}}</span> <br>
+                    Direccion: <span>{{i.address}}</span> <br>
+                    Dinero a recibir: <span>{{i.CashToPay}}</span> <br>
+                    Pedido: <span>{{i.pedido}}</span> <br>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
